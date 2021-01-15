@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>hide() and show()</title>
+    <script src="jquery-3.5.1.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            //Esconder o parágrafo
+            $("#ocultar").click(function() {
+                $(this).hide();
+            });
+
+            //Mostrar o parágrafo novamente
+            $("#btn").click(function() {
+                $("#ocultar").show();
+            });
+        });        
+    </script>
+</head>
+<body>
+    <h1>Função hide()</h1>
+    <p>Esta função esconde/oculta um elemento. No exemplo quando clicarmos no parágrafo, o mesmo será ocultado. Entretando ele continua presente na página e poderá tornar-se visível usando a função show().</p>
+
+    <p id="ocultar">
+        CLIQUE PARA OCULTAR!!!<br>
+        CLIQUE PARA OCULTAR!!!<br>
+        CLIQUE PARA OCULTAR!!!<br>
+        CLIQUE PARA OCULTAR!!!     
+    </p>
+
+    <button id="btn">Mostrar Parágrafo</button>
+</body>
+</html>
