@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>html</title>
+    <style>
+        b {color: red;}
+        i {color: blue;}
+    </style>
+    <script src="jquery-3.5.1.min.js"></script> 
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var p2_conteudo = $("#p2").html();
+
+                $("#p1").html(p2_conteudo);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função html()</h1>
+    <p id="p1">Similar a função text(), a função html() permite copiar tanto o texto contido dentro da <em>tag</em> como também todo o código html.<br>
+    No exemplo abaixo, o conteúdo do sengundo parágrafo é copiado para o primeiro parágrafo, substituindo seu conteúdo original.</p> 
+
+    <button>Copiar Texto<br> e<br> Códigos HTML</button>
+    
+    <p id="p2"><b>Lorem ipsum</b> dolor sit amet consectetur, adipisicing elit. Ipsam soluta provident laborum <i>voluptatum</i> cumque, beatae odit voluptas porro natus quibusdam corrupti minus aperiam veniam eveniet doloremque eum praesentium voluptates. Optio?</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>is</title>
+    <style>
+        div {
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("input").click(function() {
+                var estado = $(this).is(":checked");
+
+                if(estado) 
+                    $("div").hide();
+                else
+                    $("div").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função is()</h1>
+    <p>A função is() permite testar o estado de um elemento. Por exemplo, suponha que precisemos verificar se uma <em>checkbox</em> está marcada ou não, e nesse caso exibir ou esconder uma div.<br>
+    A funçã is() sempre retorna true ou false de acordo com o seletor passado como parâmetro. No exemplo, o seletor é ":checked" e só faz sentido usá-lo em <em>tags</em> do tipo checkbox.</p> 
+
+    <input type="checkbox" name="" id="caixa">
+    <label for="caixa">Esconder / Mostrar</label>   
+    <div>
+
+    </div>
+</body>
+</html>

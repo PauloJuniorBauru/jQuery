@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>val</title>
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var valor = $("input").val();
+
+                $("body").css("background-color", valor);
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Função val()</h1>
+    <p>A função val() é utilizada para as <em>tags</em> input e select. Ela permite definir um valor para a <em>input</em> ou retornar o valor contido dentro da input. A função val() funciona como get, quando não passamos nenhum valor como parâmetro. Por outro lado, quando o parâmetro é especificado, a funçaõ val() funciona como um método set(). Esse comportamento se repete em várias outras funções do jQuery.</p> 
+
+    <b>Digite o nome de uma cor:</b><br>
+    <input type="text" name="" id="">
+    <button>Aplicar</button>
+</body>
+</html>
