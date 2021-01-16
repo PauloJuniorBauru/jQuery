@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>text</title>
+    <script src="jquery-3.5.1.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                //Salva o texto do parágrafo 2 em uma variavel:
+                var p2Texto = $("#p2").text();
+
+                //Atribui ao parágrafo 1 o texto do parágrafo 2:
+                $("#p1").text(p2Texto);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função text()</h1>
+    <p id="p1">Esta função permite pegar o texto dentro de uma tag ou colocar um outro texto dentro da mesma. Abaixo temos um botão que copia o texto do segundo parágrafo para o primeiro.<br> 
+    Porém, preste atneção no resultado final dessa cópia. Se observarmos bem, pode-se ver que no parágrafo 2 temos uma palavra em negreito (Lorem ipsum). Quando o conteúdo é copiado, a palavra em negrito, não é copiada, apenas o seu texto. Essa é a principal característica da função text(), copiar apenas o texto, retirando todo o código html.</p> 
+
+    <button>Copiar Texto</button>
+    
+    <p id="p2"><b>Lorem ipsum</b> dolor sit amet consectetur, adipisicing elit. Ipsam soluta provident laborum voluptatum cumque, beatae odit voluptas porro natus quibusdam corrupti minus aperiam veniam eveniet doloremque eum praesentium voluptates. Optio?</p>
+</body>
+</html>

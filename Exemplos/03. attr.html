@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>attr</title>
+    <script src="jquery-3.5.1.min.js"></script>    
+    <script>
+        $(document).ready(function() {
+            $("img").mouseover(function() {
+                $(this).attr("width", 600);
+            });
+
+            $("img").mouseout(function() {
+                $(this).attr("width", 480);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função attr()</h1>
+    <p>A função attr() permite alterar um atributo de um elemento. No exemplo usamos a função attr para alterar a largura da imagem toda vez que o mouse passa sobre ela. Quando sai de cima da imagem, alteramos a largura para o tamanho original.</p>
+
+    <img src="https://i.pinimg.com/originals/2e/84/bf/2e84bf17d12b706cfb585fabd6e52050.gif">
+</body>
+</html>
