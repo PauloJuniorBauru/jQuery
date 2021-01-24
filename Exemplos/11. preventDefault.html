@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>preventDefault</title>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("form input[type=text]").keypress(function(tecla) {
+                
+                //Se o usuário precionar a tecla ENTER:
+                if (tecla.keyCode == 13) {    
+                    alert("Você pressionou a tecla ENTER!");                
+                    //Anulando o envio do formulário com a função.
+                    tecla.preventDefault();
+                }               
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Evitando o envio do formulário</h1>
+    <p>Toda vez que um usuário pressiona a tecla <em>enter</em> em um campo dentro de um formulário, a ação padrão do navegador web é enviar o formulário para o servidor. Essa ação pode ser indesejável, principalmente quando o usuário comete o erro de teclar <em>enter</em> antes mesmo de completar o preenchimento do formulário. A fim de evitar tal situação, o jQuery oferece uma função que previne o envio do formulário, deixando que o controle de envio do mesmo fique na mão do programador.</p>  
+    
+    <h2>Função preventDefault()</h2>
+    <p>Com a função <em>preventDefault()</em> cancelamos o evento de submissão do formulário. Essa mesma lógica pode ser utilizada para realizar avalidações no formulário e impedir que o mesmo seja enviado caso existam campos com valores inválidos.</p>
+
+    <form action="">
+        <fieldset><legend>Meu Formulário</legend> 
+            <p>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome">
+            </p> 
+            
+            <p>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome">
+            </p> 
+                       
+            <p>
+                <input type="submit" value="Enviar">
+            </p>
+        </fieldset>        
+    </form>
+</body>
+</html>
