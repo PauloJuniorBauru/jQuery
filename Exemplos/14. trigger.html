@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>trigger</title>      
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function(){ 
+            $("#changeBody").click(function() {
+                $("body").css({
+                    "background-color":"black",
+                    "color":"white"
+                });
+            });
+
+            $("#changeBody").trigger("click");
+        });
+    </script>
+</head>
+<body>
+    <h1>Função trigger()</h1>
+    <p>Está função permite disparar de modo manual um evento. No código do exemplo, a input "#changeBody", quando clicada, altera a formatação da body. Observe que, na útima linha da função ready, disparamos um clique usando a função trigger, tendo como alvo o checkbox. Com isso, quando a página for carregada automaticamente, o <em>checkbox</em> aparecerá marcado:</p>    
+
+    <input type="checkbox" id="changeBody">
+    Clique aqui para altera a body
+</body>
+</html>
