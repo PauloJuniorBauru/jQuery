@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>off</title>  
+    <style>
+        div#nome {
+            cursor: pointer; 
+            display: inline-block;
+        }
+
+        div#exemplo {
+            width: 230px;
+            border: 2px solid #ccc;
+            padding: 0 2px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    </style>   
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            //Evento no elemento DIV #nome
+            $("#nome").click(function() {
+                $(this).css("color", "red");
+            });
+
+
+            //Desligando e Evento na DIV #nome
+            $("button#desliga").click(function() {
+                $("#nome").off();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função off()</h1>
+    <p>Esta função possui o efeito contrário à função on(). Ela permite dessassociar um evento de um elemento. No exemplo abaixo, o elemento #nome terá cancelado todos os eventos a ele associados.</p>    
+    
+    <div id="nome"><h3>(Paulo Junior)</h3></div>
+    
+    <br>
+    <button id="desliga">Desligar</button>
+
+    <p>Caso queira cancelar apenas um tipo de evento, deverá especificar qual o evento, passando como parâmetro para a função off():</p>
+
+    <div id="exemplo"><p>$("#nome").off("click");</p></div>
+</body>
+</html>

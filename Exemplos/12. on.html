@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>on</title>  
+    <style>
+        input {width: 80%; color: green;}
+        div#exibe {
+            border: 1px solid #ccc;
+            padding: 20px; margin: 20px;
+        }
+    </style>  
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("input#nome").on("keyup", function(e) {
+                $("div#exibe").text($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função on()</h1>
+    <p>Outra forma de associar um tratador de eventos a um elemento é através da função on(). De fato, essa funçaõ é a forma mais recomendada para se adicionar eventos a um elemento. No exemplo a seguir temos uma input com o tratamento de eventos do tipo <em>keyup</em>. Toda vez que uma tecla é liberada, o conteúdo da <em>inputé</em> copiado para a div #exibe:</p>
+    
+    Digite algo: 
+    <input type="text" id="nome">
+    <div id="exibe"></div>
+</body>
+</html>
