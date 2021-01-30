@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>bind and unbind</title>      
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("#esconder").bind("click", function() {
+                $("img").hide();
+                alert("imagens ocultadas");
+            });
+
+            $("#remover").bind("click", function() {
+                $("#esconder").unbind("click");
+                alert("botão esconder foi desabilitado");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Função bind() e unbind()</h1>
+    <p>A função <em>bind()</em> permite associar um "ouvinte" de eventos a um elemento. Por exemplo, no nosso exemplo definimos um botão "Esconder" que, quando clicado, oculta todas as imagens da página. Para mapear o <em>click</em>, que é o gatilho dessa ação, usamos a funçaõ <em>bind</em>, passando dois parâmetros: o nome do evento e uma função anônima que contém a lógica para esconder as imagens.</p>      
+
+    <button id="esconder">Esconder Imagens</button>
+    <button id="remover">Remove Evento</button>
+
+    <br><br>
+
+    <img src="https://i.pinimg.com/originals/bb/21/4d/bb214d892bfc74581594841874dbae03.png">
+    <img src="https://i.pinimg.com/originals/00/50/2a/00502a3ba22caa58029e4b1c435a0ea9.png">
+
+    <p>Nesse exemplo também usamos a função <em>unbind</em>. É o que acontece quando o botão remover é clicado. Aqui fazemos um <em>unbind</em> do evento <em>click</em> no botão esconder. A função <em>unbind</em> remove o ouvinte de um determinado evento. Isso é útil quando precisamos desabilitar uma funcionalidade associada a um evento. A função bind é, na verdade, uma função <em>proxy</em>, que por "baixo dos panos" chama a função <em>on()</em>. Portanto, o mais indicado é usar a função on() ao invés da função bind().</p>
+</body>
+</html>
