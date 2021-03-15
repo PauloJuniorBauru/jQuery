@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Seleção por status</title> 
+    <style>
+        body { margin: 0 20px; font-family: Arial;}
+        p { font-size: 12pt; }
+        code { color: #0078be;}
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        
+    </script>
+</head>
+<body>    
+    <h1>Selecionando elementos pelo status</h1>    
+
+    <p>São elementos do jQuery que permitem selecionar determinado elementos de acordo com seu estado, tais como: marcado, selecionado, desabilitado e com o foco do usuário.</p>
+
+    <p>01. Seleciona elemento marcado.<br>
+        Este seletor permite localizar apenas os elementos que foram ou estão marcados.</p>
+    <p>Ex: <code>$("input:checked)")</code></p>
+
+<hr>  
+
+    <p>02. Seleciona elemento que está selecionado.<br>
+    Por exemplo, se quisermos encontrar a opção de um select que foi selecionada pelo usuário, poderiamos definir o seguinte seletor.</p>
+    <p>Ex: <code>$("option:selected)")</code></p>
+
+<hr> 
+
+    <p>03. Seleciona elemento que possui o foco.<br>
+    No exemplo, procuramos apenas a input que possui o foco do usuário, isto é, aquela que tem o cursor de tela no momento atual.</p>
+    <p>Ex: <code>$("input:focus)")</code></p>
+
+<hr>
+    
+    <p>04. Seleciona elemento que está desabilitado.<br>
+    No exemplo, selecionamos apenas as inputs que estão desabilitadas.</p>
+    <p>Ex: <code>$("input:disabled)")</code></p>
+
+<hr>
+
+    <p>05. Seleciona elementos visíveis.<br>
+    Neste exemplo, definimos que apenas as inputs visíveis devem ser selecionadas.</p>
+    <p>Ex: <code>$("input:visible)")</code></p>
+
+<hr>
+
+    <p>06. Seleciona elementos escondidos.<br>
+    No exemplo, buscamos apenas as inputs que estão ocultas.</p>
+    <p>Ex: <code>$("input:hidden)")</code></p>
+
+</html>

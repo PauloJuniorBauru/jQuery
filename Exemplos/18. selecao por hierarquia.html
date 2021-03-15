@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Seleção por hierarquia</title> 
+    <style>
+        body { margin: 0 20px; font-family: Arial;}
+        p { font-size: 12pt; }
+        code { color: #0078be;}
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        
+    </script>
+</head>
+<body>    
+    <h1>Selecionando elementos pela hierarquia</h1>    
+
+    <p>Permitem selecionar elementos de acordo com a posição hierárquica do elemento na árvore DOM.</p>
+    
+    <p>01. Seleciona por ancestrar direto ou indireto.<br>
+    Por exemplo, vamos selecionar todos os <code>links</code> que estão contidos dentro do formulário, sejam filhos diretos ou indiretos.</p>
+    <p>Ex: <code>$("form a")</code></p>
+
+<hr>
+
+    <p>02. Seleciona por ancestral direto.<br>
+    Por exemplo, vamos selecionar apenas os <code>links</code> que são filhos diretos do <code>form</code>.</p>
+    <p>Ex: <code>$("form > a)")</code></p>
+
+<hr>  
+
+    <p>03. Seleciona elemento adjacente.<br>
+    No exemplo, gostariamos de selecionar todas as input que são adjacentes (que estão ao lado ou após) de um elemento do tipo label.</p>
+    <p>Ex: <code>$("label + input)")</code></p>
+    
+<hr>  
+
+    <p>04. Seleciona o elemento irmão.<br>
+    Seleciona todos os inputs que possuem como irmão um button. É importante observar que esse seletor seleciona apenas os elementos que são irmãos de button, nesse caso mesmo que o elemento não esteja ao lado ou após, ele será selecionado se forem irmãos ou seja ambos devem estar no mesmo container.</p>
+
+    <p>Ex: <code>$("button ~ input)")</code></p>
+</html>

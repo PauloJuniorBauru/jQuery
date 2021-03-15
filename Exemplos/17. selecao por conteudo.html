@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Seleção por conteúdo</title> 
+    <style>
+        body { margin: 0 20px; font-family: Arial;}
+        p { font-size: 12pt; }
+        code { color: #0078be;}
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        
+    </script>
+</head>
+<body>    
+    <h1>Selecionando elementos pelo conteúdo</h1>    
+
+    <p>01. Selecionando elemento se contém determinada palavra.<br>
+    Por exemplo, selecione todos os parágrafos que contém a palvra "tempo".</p>
+    <p>Ex: <code>$("p:contains('tempo')")</code></p>
+
+<hr>
+
+    <p>02. Seleciona o elemento que contém uma determinada tag.<br>
+    Por exemplo, vamos selecionar todas as divs que possuem a tag span.</p>
+    <p>Ex: <code>$("div:has(span)")</code></p>
+
+<hr>
+
+    <p>03. Seleciona elementos vazios.<br>
+    Permite selecionar apenas aquelas divs que não possuem conteúdo ou elementos filhos.</p>
+    <p>Ex: <code>$("div:empty)")</code></p>
+
+<hr>
+
+    <p>04. Seleciona elementos com conteúdo.<br>
+    Por exemplo, seleciona apenas aquelas divs que possuem algum conteúdo ou tag filha.</p>
+
+    <p>Ex: <code>$("div:parent)")</code></p>
+</body>
+</html>

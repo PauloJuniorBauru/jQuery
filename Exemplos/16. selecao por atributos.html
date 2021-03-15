@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Seleção por atributos</title> 
+    <style>
+        body { margin: 0 20px; font-family: Arial;}
+        p { font-size: 12pt; }
+        code { color: #0078be;}
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        
+    </script>
+</head>
+<body>    
+    <h1>Selecionando elementos por seus atributos</h1>    
+
+    <p>01. Seleciona se existir um determinado atributo.<br>
+    Por exemplo, vamos selecionar apenas as inputs que possuem o atributo <code>value</code> definido.</p>
+    <p>Ex: <code>$("input[value]")</code></p>
+
+<hr>
+
+    <p>02. Seleciona elemento se <code>value</code> for igual a determinado valor.<br>
+    Por exemplo, vamos selecionar todas as inputs cujo valor do atributo <code>value</code> seja <b>PR</b>.</p>
+    <p>Ex: <code>$("input[value='PR']")</code></p>
+
+<hr>
+
+    <p>03. Seleciona se <code>value</code> for diferente de um determinado valor.<br>
+    Por exemplo, precisamos selecionar todas as inputs cujos valores sejam diferentes de <b>PR</b>.</p>
+    <p>Ex: <code>$("input[value!='PR']")</code></p>
+
+<hr>
+
+    <p>04. Seleciona de acordo com o início do valor do atributo.<br>
+    Vamos selecionar todas as input cujo atributo <code>class</code> começa com a string "pl". O sinal ^ indica que o valor deve iniciar pela string "pl".</p>
+    <p>Ex: <code>$("input[class^='pl']")</code></p>
+
+<hr>
+
+    <p>05. Seleciona de acordo com o final do valor do atributo.<br>
+    Por exemplo, vamos selecionar todas as inputs cujo atributo <code>class</code> termina com a string "idioma".</p>
+    <p>Ex: <code>$("input[class$'idioma']")</code></p>
+    <p>ou</p>
+    <p>Ex: <code>$("a[href$='.pdf']")</code></p>
+
+<hr>    
+
+    <p>06. Seleciona elemento se contém uma substring de valor.<br>
+    Por exemplo, vamos selecionar todas as inputs cujo atributo <code>class</code> contém a substring "and" em qualquer posição.</p>
+    <p>Ex: <code>$("input[class*='and']")</code></p>
+
+<hr>    
+</body>
+</html>
