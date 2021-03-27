@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Função Delay</title> 
+    <style>
+        body { margin: 20px; }
+        img { border: 1px solid black;}         
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("button#start").click(function() {
+                $("img#foto").slideUp();
+                $("img#foto").delay(2000);
+                $("img#foto").fadeIn(5000);
+            });
+        });
+    </script>
+</head>
+<body>    
+    <h1>Função Delay</h1>
+
+    <p>A função <i>delay</i> permite definir umatraso entre uma animação e outra. No exemplo a seguir, a imagem "foto" é primeiramente escondida com a função <i>slideUp()</i>. A seguir, a função <i>delay(2000)</i> faz uma pausa de 2 segundos antes de executar a funçaõ <i>fadeIn()</i>.</p>
+
+    <h2>Exemplo:</h2>
+        <button id="start">Começar</button>
+        <br><br>
+        
+        <img id="foto" src="https://www.comboinfinito.com.br/principal/wp-content/uploads/2019/06/Avengers-7.jpg" width="400">
+
+        
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Função animate</title> 
+    <style>
+        body { margin: 20px; }
+        img { border: 1px solid black;} 
+        div#barra, div#barra2 { 
+            margin-top: 20px; background-color: lightgreen; 
+            border: 1px solid black; width: 30px; height: 25px;
+        }      
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            //Exemplo 01
+            $("button#start").click(function() {
+                $("div#barra").animate({width: "100%"}, 5000);
+            });
+
+            //Exemplo 02
+            $("button#start2").click(function() {
+                $("div#barra2").animate({width: "100%", height: "200px"}, 5000);
+            });
+        });
+    </script>
+</head>
+<body>    
+    <h1>Função animate</h1>
+
+    <p>Permite criar animações sobre propriedades numéricas do CSS. No exemplo a seguir, uma div "barra" que quando clicado no botão "começar" tem sua propriedade <i>width</i> aumentada de 30px para 100% da tela. Essa animação tem duração de 5000 milissegundos (ou 5 segundos).</p>
+
+    <h2>Exemplo 01:</h2>
+        <button id="start">Começar</button>
+        
+        <div id="barra"></div>
+
+        <p>Para animar duas ou mais propriedades CSS simultaneamente, basta passar como parâmetro para a função <i>animate()</i> um conjunto de propriedade-valor entre chaves. Veja o exemplo a seguir, onde a animação opera sobre o <i>widht</i> e <i>height</i> do elemento "barra".</p>
+
+    <h2>Exemplo 02:</h2> 
+        <button id="start2">Começar</button>
+        
+        <div id="barra2"></div>
+</html>

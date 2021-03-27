@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Funções slideUp() e slideDown()</title> 
+    <style>
+        body { margin: 20px; }
+        img { border: 1px solid black;}       
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            //Esconder ELEMENTO diminuindo seu tamanho.
+            $("button#slideup").click(function() {
+                $("img").slideUp("slow");
+            });
+
+            //Mostre ELEMENTO aumentando seu tamanho.
+            $("button#slidedown").click(function() {
+                $("img").slideDown("slow");
+            });
+        });
+    </script>
+</head>
+<body>    
+    <h1>Funções slideUp() e slideDown()</h1>
+
+    <p>A função <i>slideUp()</i> esconde um elemento diminuindo o seu tamanho até desaparecer. A função <i>slideDown()</i> faz o contrário, torna o elemento visível aumentando seu tamanho progressivamente até atingir o tamanho original. No exemplo abaixo, a imagem é submetida à função slideUp() ou slideDown() sempre que um dos botões é pressionado.</p>
+
+    <h2>Exemplo - Resultado:</h2>
+        <button id="slideup">slideUp</button><br><br>
+        <button id="slidedown">slideDown</button><br><br>
+
+    <img src="https://i.pinimg.com/originals/3e/ba/4c/3eba4caaa40e47ed032ca40a27e25fef.jpg" width="350">
+</html>

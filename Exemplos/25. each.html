@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Função each()</title> 
+    <style>
+        body { margin: 20px; }
+        img { border: 1px solid black;}
+
+        input.busca {
+            width: 350px;
+            height: 25px;
+            font-size: 16px;
+            padding: 4px; 
+        }
+
+        ul { list-style: none; } 
+
+        li { 
+            background-color: navy;
+            border-radius: 4px; padding: 8px;
+            color: white;
+            display: inline; 
+        }    
+
+        .off { background-color: #ccc }
+        .on { background-color: red; }
+    </style>    
+    <script src="jquery-3.5.1.min.js"></script>     
+    <script>
+        $(document).ready(function() {
+            $("input#filtro").keyup(function() {
+                var termo = $('#filtro').val().toLowerCase();
+
+                $('ul.nomes li').each(function(index) {
+                    $(this).addClass("off");
+                    $(this).addClass("on");
+
+                    var li_texto = $(this).text().toLowerCase();
+
+                    if (li_texto.search(termo) != -1 && termo.length > 1) {
+                        //Se encontrar...
+                        $(this).removeClass('off');
+                        $(this).addClass('on')                        
+                    }
+                    else {
+                        //Se não encontrar...
+                        $(this).removeClass('on');
+                        $(this).addClass('off') 
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>    
+    <h1>Função each()</h1>
+
+    <p>A função <code>each()</code> permite navegar através de cada um dos elementos do DOM, verificando ou alterando suas propriedades de modo individual se assim necessário. O exemplo a seguir permite ao usuário digitar um nome, e à medida que as teclas são digitas, a função <i>each()</i> é chamada para percorrer todas as <code>&lt;li&gt;s</code> verificando se o conteúdo da <code>&lt;li&gt;</code> possui o texto informado pelo usuário.</p>
+
+    <h2>Exemplo:</h2>
+    <input type="text" id="filtro" class="busca">
+    <br><br>
+    
+    <ul class="nomes">
+        <li>Adriana</li>
+        <li>Alice</li>
+        <li>Fabiana</li>
+        <li>Fabiano</li>
+        <li>Fernando</li>
+        <li>Fabrício</li>
+        <li>Marcos</li> 
+        <li>Maria</li>
+        <li>Marcia</li>   
+    </ul>
+</body>        
+</html>
