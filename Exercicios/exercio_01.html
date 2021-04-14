@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">    
+    <title>Exercício 01</title>
+    <style>
+        body { padding: 0 20px; margin: 0; } p { font-size: 16pt; }
+        #quadro img { width: 648px; height: 330px; border: 5px solid gray;}
+        #miniaturas div { width: 150px; display: inline-block; margin-right: 12px;}
+        #miniaturas img { width: 150px; height: 82px; border: 5px solid gray; cursor: pointer; }
+    </style>
+    <!-- jQuery -->
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() { 
+            carregar();           
+            function carregar() {
+                let quadro = $("#quadro img").attr("src");
+                $("#miniaturas img[src='" +quadro+ "']").fadeTo("fast", .5);          
+            }
+
+            $("#miniaturas img").click(function() {
+                let min = $(this).attr("src");
+                $("#quadro img").attr("src", min).fadeOut(0).fadeIn();
+
+                $("#miniaturas img").fadeTo(0, 1);                
+                carregar();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Exercicio 01</h1>
+    <p>Faça uma página que ao clicar na imagem em miniatura, a mesma é expandida para o quadro principal. Observe que quando o clique é feito na miniatura, a mesma fica "ativada" enquanto as outras miniaturas ficam desativadas. Dica: use <b>fadeTo()</b> para acertar o nível de opacidade desejado.</p>
+
+    <br>
+    <hr><hr>
+
+    <h1>Resolução:</h1>    
+    <div id="quadro">
+        <img src="https://www.nit.pt/wp-content/uploads/2018/04/c093891596ddbff8d84fac4c00149bf8-754x394.jpg">
+    </div>
+
+    <div id="miniaturas">
+        <div>
+            <img src="https://www.nit.pt/wp-content/uploads/2018/04/c093891596ddbff8d84fac4c00149bf8-754x394.jpg">
+        </div>
+        <div>
+            <img src="https://br.web.img3.acsta.net/videothumbnails/18/01/15/16/49/3416144.jpg">
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/M/MV5BZTgzNzBlNjgtMmFiYy00ZDQ4LWE2MGYtOGFmYzU1MTQ1MjU5XkEyXkFqcGdeQXVyNzAzOTc2NTU@._V1_.jpg">
+        </div>
+        <div>
+            <img src="https://i0.wp.com/cinemacao.com/wp-content/uploads/2018/01/la-casa-de-papel-8.jpg?resize=719%2C320&ssl=1">
+        </div>
+    </div>
+       
+</body>
+</html>
